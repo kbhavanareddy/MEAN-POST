@@ -1,0 +1,39 @@
+
+    <div class="form-group row mb-3 mt-3">
+        <div class="col-xs-3 mr-3">
+            <input class="form-control" type="text" ng-model="search.title" placeholder="search by title">
+        </div>
+        <div class="col-xs-3 mr-3">
+            <input class="form-control" type="text" ng-model="search.keyword" placeholder="search by keyword">
+        </div>
+        <div class="col-xs-3 mr-3">
+            <input class="form-control" type="text" ng-model="search.location" placeholder="search by location">
+        </div>
+        <div class="col-xs-3 mr-3">
+            <button class="btn" ng-click="search()">Search</button>
+        </div>
+
+        <div class="col-xs-3 mr-3">
+            <br/>
+            <button class="btn" ng-click="reset()">Reset</button>
+        </div>
+
+            
+        <button class="btn btn-sm mr-3" ng-click="getSavedJobs()">Saved Jobs</button>
+
+        <button class="btn btn-sm mr-3" ng-click="getAppliedJobs()">Applied Jobs</button>
+
+</div>
+    
+  
+
+<div class="card card-body" ng-repeat="job in jobs">
+    
+    <br/>
+    <p><b>Title:</b>{{job.title}}</p>
+    <p><b>Location:</b>{{job.location}}</p>
+    <p><b>Description:</b>{{job.description}}</p>
+    <p><b>Keyword:</b>{{job.keyword}}</p>
+    
+
+</div>
